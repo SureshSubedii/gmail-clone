@@ -7,7 +7,7 @@
 }
 .header_left>img{
     object-fit: contain;
-    height:30px;
+    height:40px;
     margin-left:16px;
 }
 .header_left{
@@ -20,17 +20,26 @@
     display: flex;
     align-items: center;
     flex:0.7;
-    padding: 15px;
-    background-color:rgb(225, 245, 252);
-    border-radius: 5px;
+    background-color:rgb(245, 252, 255);
+    border-radius: 10px;
 }
 .header_middle>input{
     border: none;
-    padding: 15px;
-    background-color:rgb(225, 245, 252);
+    padding: 17px;
+    width:100%;
+    background-color:transparent;
     outline: none;
+    font-size: 30px;
+    
   
 }
-.header_middle>.icons-material{
- color: gray;   
+
+.header_middle>.MuiSvgIcon-root{
+    margin-left: 10px;
+    color:gray;  
+    margin-right: 10px; 
+}
+.header_right{
+    display: flex;
+
 }
