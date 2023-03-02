@@ -5,9 +5,14 @@
     padding: 20px;
     border-radius: 15px;
     margin-left: 20px;
-    margin-top: 10px;
 }
 .sidebar>Button:hover{
     box-shadow: 0px 3px 5px 3px rgb(212, 207, 207);
+
+}
+.sidebar_components{
+    margin-top: 20px;
+
+
 
 }

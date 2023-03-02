@@ -1,8 +1,8 @@
 import React from 'react'
 import './Header.css'
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton } from '@mui/material';
-import { Search, Tune } from '@mui/icons-material';
+import { Avatar, IconButton } from '@mui/material';
+import { Apps, HelpOutline, NotificationImportant, Search, Settings, Support, Tune } from '@mui/icons-material';
 
 function Header() {
   return (
@@ -17,7 +17,26 @@ function Header() {
             <input placeholder='Search Mail' type="text"/>
             <Tune/>
         </div>
-        <div className="header_right"></div>
+        <div className="header_right">
+          
+        <IconButton>
+            < HelpOutline/>
+            </IconButton>
+        <IconButton>
+          <Settings/>
+        </IconButton>
+        <IconButton>
+          <Apps/>
+        </IconButton>
+        <IconButton>
+          <Avatar/>
+
+        </IconButton>
+
+
+
+
+        </div>
         
         </div>
   )
