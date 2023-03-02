@@ -12,7 +12,7 @@ function Sidebar() {
     <div className="sidebar"> 
     <Button  className="sidebar_compose" startIcon={<Edit/> }><p>Compose</p>
     </Button>
-    <SidebarOptions Icon={Inbox} title="Inbox" number={44}/>
+    <SidebarOptions Icon={Inbox} title="Inbox" number={55}/>
     </div>
   )
 }

@@ -7,9 +7,8 @@ function SidebarOptions({Icon,title,number}) {
   return (
     <div className="sidebar_options">
         {<Icon/>}
-     
     <h4> {title}</h4>
-    <p>  {number}</p> 
+    <p> {number}</p> 
     </div>
   )
 }
