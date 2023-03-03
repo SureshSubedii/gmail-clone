@@ -1,8 +1,10 @@
-import { Button } from '@mui/material'
+import { Button, IconButton } from '@mui/material'
 import React from 'react'
 import './Sidebar.css'
-import { AccessAlarm, Description, Edit, Inbox, Send, StarBorderSharp } from '@mui/icons-material';
+import { AccessAlarm, Description, Edit, Inbox, Label, Send, StarBorderSharp } from '@mui/icons-material';
 import SidebarOptions from './SidebarOptions';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AddIcon from '@mui/icons-material/Add';
 
 function Sidebar() {
    
@@ -18,6 +20,17 @@ function Sidebar() {
     <SidebarOptions Icon={AccessAlarm} title="Snoozed" number={432}/>
     <SidebarOptions Icon={Send} title="Sent" number={453}/>
     <SidebarOptions Icon={Description} title="Drafts" number={453}/>
+    <SidebarOptions Icon={ExpandMoreIcon} title="More" />
+
+    </div>
+    <div className="sidebar_footer">
+    <p>Labels</p>
+    <p1> +</p1>
+    
+    </div>
+    <div className="sidebarFooter_item">
+      <Label/>
+      <p>Unwanted</p>
     </div>
 
 
