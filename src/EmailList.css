@@ -1,0 +1,21 @@
+.emailList{
+    /* flex:1; */
+    margin-top: 10px;
+    background-color: white;
+    width: 82%;
+    border-radius: 20px;
+    height: 90%;
+    overflow-y:scroll;
+    margin-left: 50px;
+
+}
+.email_settings{
+    display: flex;
+    justify-content: space-between;
+    width:95%;
+    margin: 20px;
+}
+.emailList_settingsLeft{
+    display: flex;
+    align-items: center;
+}

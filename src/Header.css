@@ -1,8 +1,10 @@
 .header{
     display: flex;
+    flex:1;
     justify-content: space-between;
     border-bottom: 1px solid whitesmoke;
     margin-top: 17px;
+    width:100%;
 
 }
 .header_left>img{
@@ -16,16 +18,19 @@
     margin-left: 20px;
 
 }
+.empty{
+    flex: 0.13;}
 .header_middle{
     display: flex;
     align-items: center;
-    flex:0.7;
+    flex:0.6;
+    margin-left:-90px !important;
     background-color:rgb(245, 252, 255);
     border-radius: 10px;
 }
 .header_middle>input{
     border: none;
-    padding: 17px;
+    padding: 14px;
     width:100%;
     background-color:transparent;
     outline: none;
@@ -40,6 +45,8 @@
     margin-right: 10px; 
 }
 .header_right{
+    color:red !important;
     display: flex;
+    justify-content: flex-end;
 
 }
