@@ -3,7 +3,12 @@ import './EmailList.css'
 
 function EmailList() {
   return (
-    <div>EmailList</div>
+    <div className='emailList'>
+      <div className="email_settings">
+        
+      </div>
+
+    </div>
   )
 }
 

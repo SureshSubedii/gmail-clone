@@ -2,20 +2,25 @@ import React from 'react'
 import './Header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, IconButton } from '@mui/material';
-import { Apps, HelpOutline, NotificationImportant, Search, Settings, Support, Tune } from '@mui/icons-material';
+import { Apps, HelpOutline, Search, Settings, Tune } from '@mui/icons-material';
+import logo from './logo.png';
 
 function Header() {
+  document.body.style.backgroundColor="#f6f8fc"
   return (
     <div className="header">
         <div className="header_left">
             <IconButton>
             <MenuIcon/>
             </IconButton>
-            <img src="https://blog.logomyway.com/wp-content/uploads/2021/02/gmail-logo.jpg"/></div>
+            <img src={logo} alt='Logo'/></div>
         <div className="header_middle">
             <Search/>
             <input placeholder='Search Mail' type="text"/>
+        <IconButton>
             <Tune/>
+        </IconButton>
+
         </div>
         <div className="header_right">
           

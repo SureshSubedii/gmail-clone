@@ -7,7 +7,7 @@ import Mail from './Mail';
 import Sidebar from './Sidebar';
 
 function App() {
-  document.body.style.backgroundColor='#ffffff'
+  document.body.style.backgroundColor='#f6f8fc'
   return (
     <Router>
     <div className="app">

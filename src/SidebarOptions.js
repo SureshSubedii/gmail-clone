@@ -8,7 +8,7 @@ function SidebarOptions({Icon,title,number,selected}) {
     <div className={`sidebar_options ${selected && "sidebar--active"}`}>
         {<Icon/>}
     <h4> {title}</h4>
-    <p> {number}</p> 
+    <p1> {number}</p1> 
     </div>
   )
 }
