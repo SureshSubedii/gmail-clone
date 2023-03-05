@@ -15,6 +15,7 @@ function EmailList() {
   //   gridStyle.gridGap = '8px';
   // }
   return (
+    < >
     <div className='emailList'>
 
       <div className="email_settings">
@@ -57,11 +58,14 @@ function EmailList() {
         </div>
 
       </div>
-      {/* <div className="emailList_sections">
+      <div className="emailList_sections">
 
-      </div> */}
+      </div>
+    
 
     </div>
+      <div className="emailList_right">
+    </div> </>
   )
 }
 

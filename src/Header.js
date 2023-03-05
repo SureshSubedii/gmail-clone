@@ -14,26 +14,30 @@ function Header() {
             <MenuIcon/>
             </IconButton>
             <img src={logo} alt='Logo'/></div>
-            
+            <div className="blank">
+              
+            </div>
         <div className="header_middle">
             <Search/>
             <input placeholder='Search Mail' type="text"/>
         <IconButton>
             <Tune/>
         </IconButton>
+        
 
         </div>
         <div className="empty">
-              
-            </div>
-        <div className="header_right">
-          
         <IconButton>
             < HelpOutline/>
             </IconButton>
         <IconButton>
           <Settings/>
         </IconButton>
+              
+            </div>
+        <div className="header_right">
+          
+        
         <IconButton>
           <Apps/>
         </IconButton>

@@ -9,6 +9,15 @@
     
   
 }
-/* body {
+
+
+body {
     overflow-y: hidden;
-  } */
+  }
+  @media screen and (max-width: 430px)  {
+    .MuiSvgIcon-root{
+        font-size: 12px !important;
+    }
+
+  }
+ 
