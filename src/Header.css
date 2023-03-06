@@ -21,9 +21,12 @@
 
 }
 .empty{
-    flex: 0.15;
+    flex: 0.20;
     display: flex;
     align-items: center;
+}
+.blank{
+    flex:0.000001
 }
 .header_middle{
     display: flex;

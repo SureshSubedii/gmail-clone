@@ -16,10 +16,10 @@ function Sidebar() {
     </Button>
     <div className="sidebar_components">
     <SidebarOptions Icon={Inbox} title="Inbox" number={324} selected={true}/>
-    <SidebarOptions Icon={StarBorderSharp} title="Starred" number={434} />
-    <SidebarOptions Icon={AccessAlarm} title="Snoozed" number={432}/>
-    <SidebarOptions Icon={Send} title="Sent" number={453}/>
-    <SidebarOptions Icon={Description} title="Drafts" number={453}/>
+    <SidebarOptions Icon={StarBorderSharp} title="Starred"  />
+    <SidebarOptions Icon={AccessAlarm} title="Snoozed" />
+    <SidebarOptions Icon={Send} title="Sent" />
+    <SidebarOptions Icon={Description} title="Drafts" number={45}/>
     <SidebarOptions Icon={ExpandMoreIcon} title="More" />
 
     </div>

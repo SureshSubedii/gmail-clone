@@ -1,0 +1,15 @@
+.section{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    padding-right:160px !important;
+    margin-left: 12px;
+    font-weight: 700;
+}
+.section:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.section>h4{
+    margin-left: 8px;
+}

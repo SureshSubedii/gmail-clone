@@ -1,4 +1,7 @@
-
+.sidebar{
+  flex: 0.3;
+  width: 300px;
+}
 .sidebar>Button{
     color:black;
     background-color: #c5e6ff !important;
@@ -28,20 +31,7 @@
 
 
 }
-/* .sidebar_footer::after {
-    padding: 5px;
-    content: "+";
-    margin-left: 100px;
-    color:gray;
-    
 
-    
-
-}
-.sidebar_footer:hover::after {
- background-color: whitesmoke;
-  border-radius: 100%;
-  cursor: pointer;} */
   .sidebar_footer>p1{
     color: grey;
     margin-left: 110px;

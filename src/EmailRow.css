@@ -1,0 +1,9 @@
+.emailRow{
+    margin-left:21px;
+    color:gray;
+    display: flex;
+    align-items: center;
+}
+.emailRow:hover{
+    background-color: whitesmoke;
+}

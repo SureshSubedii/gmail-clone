@@ -1,8 +1,10 @@
-import { ArrowDropDown,ChevronLeft, ChevronRight, KeyboardHide, MoreVert, Refresh } from '@mui/icons-material'
+import { ArrowDropDown,ChevronLeft, ChevronRight, Inbox, KeyboardHide, MoreVert, People, Refresh, Sell } from '@mui/icons-material'
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { IconButton } from '@mui/material'
 import React from 'react'
 import './EmailList.css'
+import EmailRow from './EmailRow';
+import Section from './Section';
 
 function EmailList() {
   // const gridStyle = {
@@ -39,6 +41,10 @@ function EmailList() {
         </div>
         <div className="emailList_settingsRight">
         <IconButton>
+          <p style={{fontSize:'15px',fontWeight:'525'}}>1-50 of 1,023</p>
+        </IconButton>
+          
+        <IconButton>
           <ChevronLeft/>
         </IconButton>
 
@@ -59,7 +65,15 @@ function EmailList() {
 
       </div>
       <div className="emailList_sections">
+        <Section Icon={Inbox} title="Primary" color="#0b57d0" selected={true}/>
+        <Section Icon={Sell} title="Promotions" color="gray"  />
 
+        <Section Icon={People} title="Social" color="gray" />
+
+
+      </div>
+      <div className="emailList_Lists">
+        <EmailRow title="Payoneer"/>
       </div>
     
 
