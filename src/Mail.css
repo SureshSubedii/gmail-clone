@@ -1,0 +1,35 @@
+.mail{
+    margin-top: 10px;
+    margin-left: 26px;
+    background-color: white;
+    width: 83%;
+    border-radius: 20px;
+    overflow: scroll;
+
+
+
+}
+.mail_tools{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mailtools_left{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 20px;
+    color: lightgray;
+    font-weight: 30;
+    padding-top: 1px;
+}
+.mailtools_right{
+    display: flex;
+    align-items: center;
+    /* white-space: nowrap; */
+
+}
+.mailtools_left>Button>.MuiSvgIcon-root{
+    padding: 10px;
+    font-size: 18px;
+}
