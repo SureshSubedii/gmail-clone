@@ -1,0 +1,60 @@
+.sendMail{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom:0;
+    right: 50px;
+    background-color: white;
+    width: 35%;
+    height: 70%;
+    box-shadow: 0 5px 7px 0 rgb(171, 171, 171);
+    padding: 13px;
+    padding-top: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+.sendMail_header{
+    background-color:#f2f7ff;
+    padding:13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.sendMail_options>button{
+    color:white;
+    background-color:#0b57d0;
+    border: none;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.sendMail>form{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    left: 0;
+}
+.sendMail>form>input{
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    height: 30px;
+    outline:none
+}
+.sendMail_close>Button{
+    cursor: pointer;
+}
+.inputLast{
+    height: 500px !important;
+    border-bottom: none !important;
+}

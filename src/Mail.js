@@ -1,8 +1,9 @@
-import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, OpenInNew, Print, ReportGmailerrorred, StarBorder, TurnLeft } from '@mui/icons-material'
+import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, ExpandMore, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, OpenInNew, Print, ReportGmailerrorred, StarBorder, TurnLeft } from '@mui/icons-material'
 import { Avatar, IconButton } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Mail.css'
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
 function Mail({}) {
   const navigate=useNavigate();
@@ -70,7 +71,7 @@ function Mail({}) {
       </div> 
       <div className="mail_headings">
         <div className="mailheadings_left">
-          <p> Two step verification turned on</p>
+          <p> Two step verification turned on</p>  {/* Subject*/}
 
         </div>
         <div className="mailheadings_right">
@@ -85,7 +86,14 @@ function Mail({}) {
       </div>
       <div className="mail_body">
         <div className="mailbody_left">
-        <Avatar/> <h5> Payoneer</h5> 
+        <Avatar/>  <h5> Payoneer </h5>     {/* Title*/}
+        <p>{"<suresh@gmail.com>"}  </p>
+        <span> to me 
+          <IconButton>
+          <ExpandMore/>
+
+          </IconButton>
+          </span>
 
 
         </div>
@@ -101,6 +109,9 @@ function Mail({}) {
             <MoreVert/>
           </IconButton>
 </div>
+      </div>
+      <div className="mail_center">
+        Hello  dsfdskfksd sdkafja;f sdaf;jsdlkfj dskfjhdsklfk  dfsgjdfkjgdf dfjkghdkfghdsf jfdkg ds jfdruhrgd kdfghfhru kfjghfd kalllllllll judhsfipahiukjg djsfghkdshgskdj dkjfghkd fgpiorutr riuhgfidp 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 jsfg djfkghldjgh djksfghdjkfsg djkfghkjdsl kjlds sdgkjdfgh eiourpahgpfdisaog rtrhgaueor                            {/* Description*/}
       </div>
       </div>
   )

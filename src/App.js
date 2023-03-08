@@ -10,6 +10,7 @@ import { IconButton } from '@mui/material';
 import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
 import check from './check.png'
 import { Add, ChevronRight, Person } from '@mui/icons-material';
+import SendMail from './SendMail';
 
 function App() {
   document.body.style.backgroundColor='#f6f8fc'
@@ -72,6 +73,7 @@ function App() {
 
 
     </div>
+    <SendMail/>
     </div>
     </Router>
   );

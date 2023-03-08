@@ -30,11 +30,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0;
-    z-index:111111;
+    bottom: 40px;
+    /* z-index:111111; */
     right: 0;
-    background-color: whitesmoke;
+    background-color:#f4f2f2;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left:2px;
+    padding-right:3px;
+    margin-left:1px;
 
+
+}
+.iconEnd>Button:hover{
+    padding-right:20px;
+    background-color: rgb(225, 225, 225);
 
 }
 .iconStart.clicked{
