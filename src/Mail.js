@@ -1,9 +1,9 @@
-import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, ReportGmailerrorred } from '@mui/icons-material'
-import { IconButton } from '@mui/material'
+import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, OpenInNew, Print, ReportGmailerrorred, StarBorder, TurnLeft } from '@mui/icons-material'
+import { Avatar, IconButton } from '@mui/material'
 import React from 'react'
 import './Mail.css'
 
-function Mail() {
+function Mail({}) {
   return (
     <div className="mail">
     <div className="mail_tools">
@@ -64,7 +64,43 @@ function Mail() {
           <KeyboardHide/>
         </IconButton>
       </div>
-      </div> </div>
+      
+      </div> 
+      <div className="mail_headings">
+        <div className="mailheadings_left">
+          <p> Two step verification turned on</p>
+
+        </div>
+        <div className="mailheadings_right">
+          <IconButton>
+            <Print/>
+          </IconButton>
+          <IconButton>
+            <OpenInNew/>
+          </IconButton>
+
+        </div>
+      </div>
+      <div className="mail_body">
+        <div className="mailbody_left">
+        <Avatar/> <h5> Payoneer</h5> 
+
+
+        </div>
+        <div className="mailbody_right">
+          <IconButton>
+            <StarBorder/>
+          </IconButton>
+          <IconButton>
+            <TurnLeft/>
+
+          </IconButton>
+          <IconButton>
+            <MoreVert/>
+          </IconButton>
+</div>
+      </div>
+      </div>
   )
 }
 
