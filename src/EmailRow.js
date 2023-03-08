@@ -1,13 +1,25 @@
 import { CheckBoxOutlineBlank, DragIndicator, StarBorderOutlined } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './EmailRow.css'
 
 function EmailRow({title,subject,description,time,id}) {
   const navigate=useNavigate()
+  const [style, setStyle] = useState(localStorage.getItem(`style_${id}`) || '');
+   const handleclick=()=>{
+    setStyle('blue');
+    localStorage.setItem(`style_${id}`, 'rgb(243 243 255)');
+
+    navigate('/mail');
+  
+    
+
+  }
+
+
   return (
-    <div onClick={()=>navigate('/mail')}  className='emailRow'>
+    <div onClick={handleclick} style={{backgroundColor:style}}  className='emailRow'>
          <div className="myClass">
          <DragIndicator/></div> 
 

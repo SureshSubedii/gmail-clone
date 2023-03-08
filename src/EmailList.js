@@ -17,7 +17,6 @@ function EmailList() {
   //   gridStyle.gridGap = '8px';
   // }
   return (
-    < >
     <div className='emailList'>
 
       <div className="email_settings">
@@ -73,39 +72,37 @@ function EmailList() {
 
       </div>
       <div className="emailList_Lists">
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
-        <EmailRow title="Payoneer"  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 1 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 2 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 3}  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={4 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={  5}  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 6 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 7 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 8 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 9 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 11 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 12 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 13 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 14 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 333 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 444 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 555 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={  7678}  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 666 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={6765 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 345433 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={  88}  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 99 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 122 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 23423}  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 98 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
+        <EmailRow title="Payoneer" id={ 765 }  subject="Two step verification turned on" description="Dear Suresh Subedi, This mail is to confirm that the two step verification has been turned on. Ignore this if this is done by you. Else contact support." time="10 PM"/>
 
       </div>
     
 
     </div>
-      <div className="emailList_right">
-    </div> </>
   )
 }
 

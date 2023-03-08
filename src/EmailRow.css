@@ -6,7 +6,12 @@
     padding:2px;
 
 
+
 }
+.emailRow.clicked {
+    background-color: blue;
+
+  }
 .myClass>.MuiSvgIcon-root{
     display: flex;
     color: gray !important;

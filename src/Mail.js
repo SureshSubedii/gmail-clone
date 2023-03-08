@@ -1,15 +1,17 @@
 import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, OpenInNew, Print, ReportGmailerrorred, StarBorder, TurnLeft } from '@mui/icons-material'
 import { Avatar, IconButton } from '@mui/material'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Mail.css'
 
 function Mail({}) {
+  const navigate=useNavigate();
   return (
     <div className="mail">
     <div className="mail_tools">
     <div className="mailtools_left">
-      <IconButton>
-        <ArrowBack/>
+      <IconButton onClick={()=>navigate('/')}>
+        <ArrowBack   />
       </IconButton>
       <IconButton>
       <MoveToInbox/>
