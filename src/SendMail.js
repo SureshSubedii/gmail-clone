@@ -6,16 +6,27 @@ import './SendMail.css'
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import { useDispatch } from 'react-redux';
 import { closeSendMessage } from './features/mailSlice';
+import { db } from './firebase';
+import firebase from 'firebase/compat/app';
+
 
 
 function SendMail() {
     const{register,handleSubmit,watch,formState:{errors}}=useForm();
+    const dispatch = useDispatch();
+
     const onSubmit=(data)=>{
         console.log(data)
+        db.collection("email").add({
+            to:FormData.to,
+            subject:FormData.subject,
+            message:FormData.message,
+            timestamp:firebase.firestore.FieldValue.serverTimestamp()
+        })
+        dispatch(closeSendMessage())
 
 
     }
-    const dispatch = useDispatch();
 
   return (
     <div className="sendMail">
