@@ -23,7 +23,20 @@
     justify-content: space-between;
     width: 100%;
 }
-.sendMail_options>button{
+.sendMail_options{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    bottom:10px;
+    width: 100%;
+
+}
+.sendMail_options>Button>.MuiSvgIcon-root{
+    font-size: 20px;
+    color: rgb(54, 52, 52);
+}
+
+.sendMail_options>Button.send{
     color:white;
     background-color:#0b57d0;
     border: none;
@@ -37,6 +50,10 @@
     padding-bottom: 9px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.sendMail_options>Button.send:hover{
+    box-shadow: 0 0 7px 2px gray ;
 }
 .sendMail>form{
     width: 100%;
@@ -55,7 +72,12 @@
     cursor: pointer;
 }
 .inputLast{
-    height: 500px !important;
+    padding: 0 0 400px 0 !important;
     border-bottom: none !important;
     word-wrap: break-word !important;
+}
+.sendMail>form>p{
+    color:red;
+    text-align: right;
+    padding: 5px;
 }

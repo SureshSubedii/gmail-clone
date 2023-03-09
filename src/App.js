@@ -11,8 +11,11 @@ import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
 import check from './check.png'
 import { Add, ChevronRight, Person } from '@mui/icons-material';
 import SendMail from './SendMail';
+import { useSelector } from 'react-redux';
+import { selectSendMessageIsOpen } from './features/mailSlice';
 
 function App() {
+  const sendMessageIsOpen=useSelector(selectSendMessageIsOpen);
   document.body.style.backgroundColor='#f6f8fc'
   const [click, setClick] = useState(false)
   const handleClick=()=>{
@@ -73,7 +76,7 @@ function App() {
 
 
     </div>
-    <SendMail/>
+    {sendMessageIsOpen && <SendMail/>}
     </div>
     </Router>
   );

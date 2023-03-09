@@ -4,14 +4,17 @@ import './Sidebar.css'
 import { AccessAlarm, Description, Edit, Inbox, Label, Send, StarBorderSharp } from '@mui/icons-material';
 import SidebarOptions from './SidebarOptions';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useDispatch } from 'react-redux';
+import { openSendMessage } from './features/mailSlice';
 
 function Sidebar() {
+  const dispatch=useDispatch();
    
 
 
   return (
     <div className="sidebar"> 
-    <Button  className="sidebar_compose" startIcon={<Edit/> }><p>Compose</p>
+    <Button  className="sidebar_compose" onClick={()=> dispatch(openSendMessage())} startIcon={<Edit/> }><p>Compose</p>
     </Button>
     <div className="sidebar_components">
     <SidebarOptions Icon={Inbox} title="Inbox" number={324} selected={true}/>
@@ -24,7 +27,7 @@ function Sidebar() {
     </div>
     <div className="sidebar_footer">
     <p>Labels</p>
-    <p1> +</p1>
+    <span> +</span>
     
     </div>
     <div className="sidebarFooter_item">
