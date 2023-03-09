@@ -3,7 +3,6 @@ import { Avatar, IconButton } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Mail.css'
-import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
 function Mail({}) {
   const navigate=useNavigate();

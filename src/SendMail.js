@@ -1,11 +1,11 @@
 import { Close, OpenInFullOutlined, RemoveOutlined } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
 import React from 'react'
+import { useForm } from 'react-hook-form';
 import './SendMail.css'
-import {useForm} from 'react-hook-form'
 
 function SendMail() {
-    const{register,handleSubmit,watch,errors}=useForm();
+    const{register,handleSubmit,watch,formState:{errors}}=useForm();
     const onSubmit=(data)=>{
         console.log(data)
 
@@ -31,9 +31,14 @@ function SendMail() {
            </div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input name="to" placeholder="To" type="text" ref={register({required:true})}/>
-            <input name="subject" placeholder="Subject" type="text" ref={register({required:true})}/>
-            <input  name="message" className="inputLast" type="text" ref={register({required:true})}/>
+            <input   placeholder="To" type="text" {...register("to",{required:"Required!"})}/>
+            {errors.to && <p> {errors.to.message}</p> }
+            <input  placeholder="Subject" type="text" {...register("subject",{required:"Required!"})}/>
+            {errors.subject && <p> {errors.subject.message}</p> }
+
+            <input   className="inputLast" type="text" {...register("message",{required:"Required!"})}/>
+            {errors.message && <p> {errors.message.message}</p> }
+
 
             <div className="sendMail_options">
                 <button type="submit">Send</button>

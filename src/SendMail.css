@@ -57,4 +57,5 @@
 .inputLast{
     height: 500px !important;
     border-bottom: none !important;
+    word-wrap: break-word !important;
 }

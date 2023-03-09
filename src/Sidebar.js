@@ -1,10 +1,9 @@
-import { Button, IconButton } from '@mui/material'
+import { Button} from '@mui/material'
 import React from 'react'
 import './Sidebar.css'
 import { AccessAlarm, Description, Edit, Inbox, Label, Send, StarBorderSharp } from '@mui/icons-material';
 import SidebarOptions from './SidebarOptions';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import AddIcon from '@mui/icons-material/Add';
 
 function Sidebar() {
    
