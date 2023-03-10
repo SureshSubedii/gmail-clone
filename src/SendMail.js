@@ -12,18 +12,18 @@ import firebase from 'firebase/compat/app';
 
 
 function SendMail() {
-    const{register,handleSubmit,watch,formState:{errors}}=useForm();
+    const{register,handleSubmit,formState:{errors}}=useForm();
     const dispatch = useDispatch();
 
     const onSubmit=(data)=>{
         console.log(data)
         db.collection("email").add({
-            to:FormData.to,
-            subject:FormData.subject,
-            message:FormData.message,
+            to:data.to,
+            subject:data.subject,
+            message:data.message,
             timestamp:firebase.firestore.FieldValue.serverTimestamp()
         })
-        dispatch(closeSendMessage())
+        dispatch(closeSendMessage());
 
 
     }

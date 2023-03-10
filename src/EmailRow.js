@@ -36,12 +36,21 @@ function EmailRow({title,subject,description,time,id}) {
         <h4 className="emailRow_title">
             {title}
         </h4>
-        <h4 className="emailRow_message">
+        
+        <div className="emailRow_subDesc">
+          {}
+        <h4>
           {subject}
         </h4>
-        <div className="emailRow_description">
-           - {description.slice(0,127)}{description.length>100?"...":''}       {/*text-overflow:ellipsis can be used in Css for the same effect. */}
+          <p> - {description} 
+          {/* {(description.length+subject.length>170)?'...':''} */}
+          </p>       {/*text-overflow:ellipsis can be used in Css for the same effect. */}
+        </div>
+        {/* <div className="empty_space"></div> */}
+        <div className="time">
         <p>{time}</p>
+
+
         </div>
     
     </div>
