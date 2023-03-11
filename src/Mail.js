@@ -91,7 +91,7 @@ function Mail({}) {
       <div className="mail_body">
         <div className="mailbody_left">
         <Avatar src={user.photoUrl}/>  <h5> {user.displayName} </h5>     {/* Title*/}
-        <p>{user?.email} {">"} </p>
+        <p className="p_email"> {"<"}{user?.email}{">"} </p>
         <span> to {mail?.title}
           <IconButton>
           <ExpandMore/>

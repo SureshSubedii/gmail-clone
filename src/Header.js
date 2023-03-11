@@ -4,13 +4,21 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, IconButton } from '@mui/material';
 import { Apps, HelpOutline, Search, Settings, Tune } from '@mui/icons-material';
 import logo from './logo.png';
-import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { logOut, selectUser } from './features/userSlice';
+import { auth } from './firebase';
 
 
 function Header() {
   document.body.style.backgroundColor="#f6f8fc"
   const user=useSelector(selectUser);
+  const dispatch =useDispatch();
+  const handleClick=()=>{
+    auth.signOut().then(()=>
+    dispatch(logOut())
+    )
+
+  }
 
   return (
     <div className="header">
@@ -47,7 +55,7 @@ function Header() {
           <Apps/>
         </IconButton>
         <IconButton>
-          <Avatar src={user.photoUrl}/>
+          <Avatar onClick={handleClick} src={user.photoUrl}/>
 
         </IconButton>
 

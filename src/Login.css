@@ -25,3 +25,11 @@
 .login_container>Button{
     margin-top: 50px;
 }
+@media (max-width: 429px) {
+    .login_container{
+        height:20vh;    
+
+
+    }
+
+}

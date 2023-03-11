@@ -37,19 +37,9 @@
 
 @media (max-width: 429px) {
     .emailList{
-        width: 90%
+    overflow-x:scroll;
 
     }
-    .emailList_right{
-        width: 5px;
-    }
-    .email_settings{
    
-
-        margin-left: 4px;
-        width: max-content
-
-
-}
 
 }

@@ -5,6 +5,8 @@
     width: 100%;
     border-radius: 20px;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
 
 
 
@@ -56,13 +58,11 @@
     font-size: 18px;
     font-weight:500;
 }
-.mailbody_left>p{
+.p_email{
     margin-top: -15px !important;
-    margin-left: 5px;
+    margin-left: -4px;
     color: gray;
     font-size: 12px;
-    display: flex;
-    flex-direction: column;
 
 
 }
@@ -105,5 +105,53 @@
 }
 .mail_center{
     margin-left: 75px;
+}
+@media (max-width: 429px) {
+    .mailtools_left{
+        font-size: 9px;
+    }
+    .mail_center{
+        font-size: 10px;
+        margin-top:60px
+    }
+    
+
+    
+    .mailbody_left>h5{
+        font-size:9px;
+        margin-left: 2px;
+    white-space: nowrap;
+        
+    }
+    .p_email{
+        margin-left: 2px;
+        font-size: 6px;
+        width: fit-content;
+
+
+    }
+    .mailheadings_left>p{
+        font-size: 13px;
+        width: fit-content;
+    }
+    .mailbody_left>span{
+        display: flex;
+    margin-top: 15px;
+    margin-left: -145px;
+    font-size: 7px;
+    width: fit-content;
+    white-space: nowrap;
+
+    }
+    .mailbody_right{
+        position: relative;
+    }
+    .mailheadings_right{
+        position: relative;
+
+
+
+    }
+
 }
 

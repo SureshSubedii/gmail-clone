@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import './App.css';
 import EmailList from './EmailList';
@@ -11,14 +11,16 @@ import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
 import check from './check.png'
 import { Add, ChevronRight, Person } from '@mui/icons-material';
 import SendMail from './SendMail';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectSendMessageIsOpen } from './features/mailSlice';
-import { selectUser } from './features/userSlice';
+import { logIn, selectUser } from './features/userSlice';
 import Login from './LogIn';
+import { auth } from './firebase';
 
 function App() {
   const sendMessageIsOpen=useSelector(selectSendMessageIsOpen);
   const user=useSelector(selectUser);
+  const dispatch=useDispatch();
   document.body.style.backgroundColor='#f6f8fc'
   const [click, setClick] = useState(false)
   const handleClick=()=>{
@@ -33,6 +35,23 @@ function App() {
 
   }
   }
+  useEffect(() => {
+    auth.onAuthStateChanged(user=>{
+      if(user){
+        dispatch(logIn({
+          displayName:user.displayName,
+          email:user.email,
+          photoUrl:user.photoURL}))
+
+      }
+      else{
+
+      }
+    })
+  
+   
+  }, [])
+  
 
   return (
     <Router>
