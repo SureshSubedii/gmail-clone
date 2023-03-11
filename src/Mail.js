@@ -4,11 +4,13 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { selectOpenMail } from './features/mailSlice'
+import { selectUser } from './features/userSlice'
 import './Mail.css'
 
 function Mail({}) {
   const navigate=useNavigate();
   const mail=useSelector(selectOpenMail);
+  const user=useSelector(selectUser);
   return (
     <div className="mail">
     <div className="mail_tools">
@@ -73,7 +75,7 @@ function Mail({}) {
       </div> 
       <div className="mail_headings">
         <div className="mailheadings_left">
-          <p>{mail.subject}</p>  {/* Subject*/}
+          <p>{mail?.subject}</p>  {/* Subject*/}
 
         </div>
         <div className="mailheadings_right">
@@ -88,9 +90,9 @@ function Mail({}) {
       </div>
       <div className="mail_body">
         <div className="mailbody_left">
-        <Avatar/>  <h5> {'Suresh'} </h5>     {/* Title*/}
-        <p>{mail?.title} {">"} </p>
-        <span> to sdsjksfashjk@hmail.com
+        <Avatar src={user.photoUrl}/>  <h5> {user.displayName} </h5>     {/* Title*/}
+        <p>{user?.email} {">"} </p>
+        <span> to {mail?.title}
           <IconButton>
           <ExpandMore/>
 
@@ -113,7 +115,7 @@ function Mail({}) {
 </div>
       </div>
       <div className="mail_center">
-        {mail.description}
+        {mail?.description}
       </div>
       </div>
   )

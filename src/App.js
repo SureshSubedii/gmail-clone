@@ -13,13 +13,15 @@ import { Add, ChevronRight, Person } from '@mui/icons-material';
 import SendMail from './SendMail';
 import { useSelector } from 'react-redux';
 import { selectSendMessageIsOpen } from './features/mailSlice';
+import { selectUser } from './features/userSlice';
+import Login from './LogIn';
 
 function App() {
   const sendMessageIsOpen=useSelector(selectSendMessageIsOpen);
+  const user=useSelector(selectUser);
   document.body.style.backgroundColor='#f6f8fc'
   const [click, setClick] = useState(false)
   const handleClick=()=>{
-    console.log("Happy Birthday")
     if(click===false){
     document.querySelector('.iconStart').classList.add("clicked")
     setClick(true);
@@ -30,11 +32,11 @@ function App() {
 
 
   }
-
   }
+
   return (
     <Router>
-    <div className="app">
+      {!user?(<Login/>):(<div className="app">
     <Header/>
     <div className="app_body">
     <Sidebar/>
@@ -77,7 +79,8 @@ function App() {
 
     </div>
     {sendMessageIsOpen && <SendMail/>}
-    </div>
+    </div>)}
+    
     </Router>
   );
 }
