@@ -1,15 +1,19 @@
 import { CheckBoxOutlineBlank, DragIndicator, StarBorderOutlined } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import './EmailRow.css'
+import { selectMail} from './features/mailSlice'
 
 function EmailRow({title,subject,description,time,id}) {
-  const navigate=useNavigate()
+  const navigate=useNavigate();
+  const dispatch=useDispatch();
   const [style, setStyle] = useState(localStorage.getItem(`style_${id}`) || '');
    const handleclick=()=>{
-    setStyle('blue');
+    setStyle('rgb(243 243 255)');
     localStorage.setItem(`style_${id}`, 'rgb(243 243 255)');
+    dispatch(selectMail({title,subject,description,time,id}))
 
     navigate('/mail');
   

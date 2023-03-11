@@ -67,12 +67,14 @@
 
 }
 .mailbody_left>span{
+    position: absolute;
+    margin-left: 54px;
     display: flex;
     align-items: center;
     margin-top: 30px ;
     color: gray;
     font-size: 12px;
-    margin-left:-195px;
+    /* margin-left:-195px; */
 
 
 

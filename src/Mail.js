@@ -1,11 +1,14 @@
 import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, ExpandMore, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, OpenInNew, Print, ReportGmailerrorred, StarBorder, TurnLeft } from '@mui/icons-material'
 import { Avatar, IconButton } from '@mui/material'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { selectOpenMail } from './features/mailSlice'
 import './Mail.css'
 
 function Mail({}) {
   const navigate=useNavigate();
+  const mail=useSelector(selectOpenMail);
   return (
     <div className="mail">
     <div className="mail_tools">
@@ -70,7 +73,7 @@ function Mail({}) {
       </div> 
       <div className="mail_headings">
         <div className="mailheadings_left">
-          <p> Two step verification turned on</p>  {/* Subject*/}
+          <p>{mail.subject}</p>  {/* Subject*/}
 
         </div>
         <div className="mailheadings_right">
@@ -85,9 +88,9 @@ function Mail({}) {
       </div>
       <div className="mail_body">
         <div className="mailbody_left">
-        <Avatar/>  <h5> Payoneer </h5>     {/* Title*/}
-        <p>{"<suresh@gmail.com>"}  </p>
-        <span> to me 
+        <Avatar/>  <h5> {'Suresh'} </h5>     {/* Title*/}
+        <p>{mail?.title} {">"} </p>
+        <span> to sdsjksfashjk@hmail.com
           <IconButton>
           <ExpandMore/>
 
@@ -110,7 +113,7 @@ function Mail({}) {
 </div>
       </div>
       <div className="mail_center">
-        Hello  dsfdskfksd sdkafja;f sdaf;jsdlkfj dskfjhdsklfk  dfsgjdfkjgdf dfjkghdkfghdsf jfdkg ds jfdruhrgd kdfghfhru kfjghfd kalllllllll judhsfipahiukjg djsfghkdshgskdj dkjfghkd fgpiorutr riuhgfidp 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 jsfg djfkghldjgh djksfghdjkfsg djkfghkjdsl kjlds sdgkjdfgh eiourpahgpfdisaog rtrhgaueor                            {/* Description*/}
+        {mail.description}
       </div>
       </div>
   )
