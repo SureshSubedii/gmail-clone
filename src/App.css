@@ -66,6 +66,10 @@ body {
     .icons_right>.iconStart>Button>.check{
         height: 12px;
     }
+    
+body {
+    overflow:scroll ;
+  }
 
   }
  
