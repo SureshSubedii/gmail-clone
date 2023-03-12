@@ -6,14 +6,14 @@ import { useNavigate } from 'react-router-dom'
 import './EmailRow.css'
 import { selectMail} from './features/mailSlice'
 
-function EmailRow({title,subject,description,time,id}) {
+function EmailRow({title,subject,description,time,id,photo,name,email}) {
   const navigate=useNavigate();
   const dispatch=useDispatch();
   const [style, setStyle] = useState(localStorage.getItem(`style_${id}`) || '');
    const handleclick=()=>{
     setStyle('rgb(243 243 255)');
     localStorage.setItem(`style_${id}`, 'rgb(243 243 255)');
-    dispatch(selectMail({title,subject,description,time,id}))
+    dispatch(selectMail({title,subject,description,time,id,photo,name,email}))
 
     navigate('/mail');
   

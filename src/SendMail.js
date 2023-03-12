@@ -8,20 +8,27 @@ import { useDispatch } from 'react-redux';
 import { closeSendMessage } from './features/mailSlice';
 import { db } from './firebase';
 import firebase from 'firebase/compat/app';
+import { selectUser } from './features/userSlice';
+import { useSelector } from 'react-redux'
+
 
 
 
 function SendMail() {
+    const user=useSelector(selectUser)
     const{register,handleSubmit,formState:{errors}}=useForm();
     const dispatch = useDispatch();
 
     const onSubmit=(data)=>{
-        console.log(data)
+        // console.log(data)
         db.collection("email").add({
             to:data.to,
             subject:data.subject,
             message:data.message,
-            timestamp:firebase.firestore.FieldValue.serverTimestamp()
+            timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+            photo:user.photoUrl,
+            name:user.displayName,
+            email:user.email
         })
         dispatch(closeSendMessage());
 

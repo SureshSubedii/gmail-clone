@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectSendMessageIsOpen } from './features/mailSlice';
 import { logIn, selectUser } from './features/userSlice';
 import Login from './LogIn';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
 
 function App() {
   const sendMessageIsOpen=useSelector(selectSendMessageIsOpen);
@@ -41,9 +41,13 @@ function App() {
         dispatch(logIn({
           displayName:user.displayName,
           email:user.email,
-          photoUrl:user.photoURL}))
+          photoUrl:user.photoURL}));
+          // db.collection("photos").add({
+          //   purl:user.photoURL
+          // })
+          }
 
-      }
+      
       else{
 
       }

@@ -1,16 +1,33 @@
 import { AccessTime, AddTask, ArrowBack,ChevronLeft, ChevronRight, DeleteOutlineOutlined, DriveFileMove, ExpandMore, KeyboardHide, Label, MailOutline, MoreVert, MoveToInbox, OpenInNew, Print, ReportGmailerrorred, StarBorder, TurnLeft } from '@mui/icons-material'
 import { Avatar, IconButton } from '@mui/material'
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { selectOpenMail } from './features/mailSlice'
 import { selectUser } from './features/userSlice'
 import './Mail.css'
+import { db } from './firebase';
+
 
 function Mail({}) {
   const navigate=useNavigate();
   const mail=useSelector(selectOpenMail);
-  const user=useSelector(selectUser);
+  const [emails, setEmail] = useState([]);
+
+  // const user=useSelector(selectUser);
+  useEffect(() => {
+    db.collection("email").onSnapshot(
+      (snapshot)=>{
+        setEmail(
+          snapshot.docs.map((doc)=>({
+          id:doc.id,
+          data:doc.data()
+        })))
+
+      }
+    )
+  },[])
+  const email = emails.filter((email) => email.id === mail.id)[0]
   return (
     <div className="mail">
     <div className="mail_tools">
@@ -75,7 +92,7 @@ function Mail({}) {
       </div> 
       <div className="mail_headings">
         <div className="mailheadings_left">
-          <p>{mail?.subject}</p>  {/* Subject*/}
+           <p>{email?.data?.subject}</p>
 
         </div>
         <div className="mailheadings_right">
@@ -90,9 +107,9 @@ function Mail({}) {
       </div>
       <div className="mail_body">
         <div className="mailbody_left">
-        <Avatar src={user.photoUrl}/>  <h5> {user.displayName} </h5>     {/* Title*/}
-        <p className="p_email"> {"<"}{user?.email}{">"} </p>
-        <span> to {mail?.title}
+        <Avatar src={email?.data?.photo}/>  <h5> {email?.data?.name} </h5>     {/* Title */}
+        <p className="p_email"> {"<"}{email?.data?.email}{">"} </p>
+        <span> to {email?.data?.to}
           <IconButton>
           <ExpandMore/>
 
@@ -115,7 +132,7 @@ function Mail({}) {
 </div>
       </div>
       <div className="mail_center">
-        {mail?.description}
+        {email?.data?.message}
       </div>
       </div>
   )
